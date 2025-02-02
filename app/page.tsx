@@ -59,8 +59,8 @@ export default function Home() {
       </div>
 
       <div className="page2">
-        <div className="rect1"></div>
-        <div className="rect2"></div>
+        <Image src="/p7.png" alt="hand holding a bottle" width={756} height={880} className="rect1"/>
+        <Image src="/p8.png" alt="hand holding a bottle" width={756} height={880} className="rect2"/>
       </div>
 
       <div className="bottle">
