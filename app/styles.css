@@ -127,19 +127,29 @@ body {
   to { top: 567px; } /* 347px + 220px */
 }
 
+@keyframes moveBottom2{
+  from { top: 567px; }
+  to { top: 1000px; } /* 347px + 220px */
+}
+
+@keyframes movetop2{
+  from { top: 97px; }
+  to { top: 1000px; } /* 347px + 220px */
+}
+
 /* Moving Elements */
 .top {
   position: absolute;
   top: 347px;
   left: 663px;
-  animation: moveTop 2s ease-in-out 1s forwards;
+  animation: moveTop 2s ease-in-out 1s forwards, movetop2 2s ease-out 4s forwards;
 }
 
 .bottom {
   position: absolute;
   top: 347px;
   left: 663px;
-  animation: moveBottom 2s cubic-bezier(0.42, 0, 0.58, 1) 1s forwards;
+  animation: moveBottom 2s cubic-bezier(0.42, 0, 0.58, 1) 1s forwards, moveBottom2 2s ease-out 4s forwards;
 }
 
 /* Expanding Ring Animation */
@@ -238,10 +248,23 @@ body {
   opacity: 0; /* Start with invisible */
   transform: scale(0); /* Start scaled down to 0 */
   transform-origin: center center; /* Ensure scaling happens from the center */
-  animation: scaleIn 3s ease-out 1s forwards; /* Delay of 1s, scale in for 3s */
+  animation: scaleIn 3s ease-out 1s forwards, moveToTop 2s ease-out 4s forwards; /* Added moveToTop after 4s */
 }
 
-@keyframes scaleIn{
+.right {
+  position: absolute;
+  left: 1291px; /* Centered position */
+  top: 675px; /* Centered position */
+  width: 125px; /* Full width */
+  height: 125px; /* Full height */
+  opacity: 0; /* Start with invisible */
+  transform: scale(0); /* Start scaled down to 0 */
+  transform-origin: center center; /* Ensure scaling happens from the center */
+  animation: scaleIn 3s ease-out 1s forwards, moveToTop 2s ease-out 4s forwards; /* Added moveToTop after 4s */
+}
+
+/* Scale animation */
+@keyframes scaleIn {
   0% {
     opacity: 0; /* Start invisible */
     transform: scale(0); /* Start with 0 scale */
@@ -252,17 +275,50 @@ body {
   }
 }
 
-.right{
-  position: absolute;
-  left:1291px;;
-  top:675px;
-  width:125px;
-  height:125px;
-  opacity: 0; /* Start with invisible */
-  transform: scale(0); /* Start scaled down to 0 */
-  transform-origin: center center; /* Ensure scaling happens from the center */
-  animation: scaleIn 3s ease-out 1s forwards; /* Delay of 1s, scale in for 3s */
+/* New animation to move the elements to the top */
+@keyframes moveToTop {
+  0% {
+    top: 675px; /* Start from the original position */
+  }
+  100% {
+    top: 97px; /* Move to the top */
+  }
 }
+
+
+.rect1{
+  position: absolute;
+  top:860px;
+  left:0px;
+  height:880;
+  width:756;
+  background-color:#E6D4CB;
+}
+.rect2{
+  position: absolute;
+  top:860px;
+  left:756px;
+  height:880;
+  width:763;
+  background-color:#20292C;
+}
+
+
+@keyframes scrollEffect {
+  0% {
+    transform: translateY(0); /* Start at the top */
+  }
+  100% {
+    transform: translateY(400px); /* Scroll down 400px */
+  }
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow: hidden; /* Hide overflowing content */
+  animation: scrollEffect 2s ease-out 4s forwards; /* Delay of 4s and animate for 2s */
+}
+
 
 /* Font Styles */
 .familjen-grotesk-bold {
