@@ -248,7 +248,7 @@ body {
   opacity: 0; /* Start with invisible */
   transform: scale(0); /* Start scaled down to 0 */
   transform-origin: center center; /* Ensure scaling happens from the center */
-  animation: scaleIn 3s ease-out 1s forwards, moveToTop 2s ease-out 4s forwards; /* Added moveToTop after 4s */
+  animation: scaleIn 3s ease-out 1s forwards, moveToTop 1s ease-out 4s forwards; /* Added moveToTop after 4s */
 }
 
 .right {
@@ -260,7 +260,7 @@ body {
   opacity: 0; /* Start with invisible */
   transform: scale(0); /* Start scaled down to 0 */
   transform-origin: center center; /* Ensure scaling happens from the center */
-  animation: scaleIn 3s ease-out 1s forwards, moveToTop 2s ease-out 4s forwards; /* Added moveToTop after 4s */
+  animation: scaleIn 3s ease-out 1s forwards, moveToTop 1s ease-out 4s forwards; /* Added moveToTop after 4s */
 }
 
 /* Scale animation */
