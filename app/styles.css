@@ -25,7 +25,7 @@ body {
       top: 347px;  /* Initial position */
     }
     100% {
-      top: calc(347px + 100px);  /* Move 200px downwards */
+      top: calc(347px + 200px);  /* Move 200px downwards */
     }
   }
   
@@ -102,8 +102,32 @@ body {
     margin-right: 40px;
     font-family: 'Familjen Grotesk', serif;  /* Apply the font here */
   }
-  
-  
+
+  .t1 {
+    font-family: 'Familjen Grotesk', serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 24.16px;
+    position: absolute;
+    top: 392px;
+    left: 620.18px;
+    animation: transformText 5s forwards;
+}
+
+@keyframes transformText {
+    from {
+        font-size: 24.16px;
+        top: 392px;
+        left: 620.18px;
+    }
+    to {
+        font-size: 96px;
+        top: 285px;
+        left: 215px;
+    }
+}
+
+
   .header-button {
     padding: 12px 30px;  /* Adjusted padding for better shape */
     background: linear-gradient(to right, #a0c4ff, #007bff);  /* Gradient from light blue to blue */

@@ -29,8 +29,15 @@ export default function Home() {
         />
       </div>
 
+
+
       <div className="bottle">
       <div className="ring"></div>
+
+      <div className="t1"><h1>The Ultimate Companion</h1>
+      <h2 >for Hydration</h2></div>
+
+
       <Image
           src="/p2.png"
           alt="bottle-bottom"
