@@ -30,13 +30,14 @@ export default function Home() {
       </div>
 
 
-
       <div className="bottle">
       <div className="ring"></div>
 
       <div className="t1"><h1>The Ultimate Companion</h1>
       <h2 >for Hydration</h2></div>
 
+      <div className="t2"><h1>we believe in the power of hydration.</h1>
+      <h2 >Our mission is simple yet vital</h2></div>
 
       <Image
           src="/p2.png"
