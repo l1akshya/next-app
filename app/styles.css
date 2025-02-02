@@ -304,22 +304,6 @@ body {
 }
 
 
-@keyframes scrollEffect {
-  0% {
-    transform: translateY(0); /* Start at the top */
-  }
-  100% {
-    transform: translateY(400px); /* Scroll down 400px */
-  }
-}
-
-.scroll-container {
-  height: 100vh;
-  overflow: hidden; /* Hide overflowing content */
-  animation: scrollEffect 2s ease-out 4s forwards; /* Delay of 4s and animate for 2s */
-}
-
-
 /* Font Styles */
 .familjen-grotesk-bold {
   font-family: "Familjen Grotesk";
