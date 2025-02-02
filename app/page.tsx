@@ -39,6 +39,8 @@ export default function Home() {
       <div className="t2"><h1>we believe in the power of hydration.</h1>
       <h2 >Our mission is simple yet vital</h2></div>
 
+
+      <button className="bottom-button">Inquiry Now</button>
       <Image
           src="/p2.png"
           alt="bottle-bottom"
@@ -53,6 +55,25 @@ export default function Home() {
           height={793}
           className="top"
         />
+
+        <div>
+          <Image
+            src="/p5.png"
+            alt="bottle-bottom"
+            width={125}
+            height={125}
+            className="right"
+          />
+
+          <Image
+            src="/p6.png"
+            alt="bottle-bottom"
+            width={125}
+            height={125}
+            className="left"
+          />
+        </div>
+      
       </div>
     </div>
     
