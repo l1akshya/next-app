@@ -3,6 +3,7 @@
 /* Global Styles */
 body {
   font-family: 'Familjen Grotesk', sans-serif;
+  height:3400px;
 }
 
 /* Root Variables */
@@ -129,12 +130,12 @@ body {
 
 @keyframes moveBottom2{
   from { top: 567px; }
-  to { top: 1000px; } /* 347px + 220px */
+  to { top: 980px; } /* 347px + 220px */
 }
 
 @keyframes movetop2{
   from { top: 97px; }
-  to { top: 1000px; } /* 347px + 220px */
+  to { top: 980px; } /* 347px + 220px */
 }
 
 /* Moving Elements */
@@ -301,6 +302,282 @@ body {
   height:880;
   width:763;
   background-color:#20292C;
+}
+
+
+
+
+
+
+
+
+/*page 3 starts Here*/
+
+
+.header2text1{
+  position: absolute;
+  font-size: 60px;
+  font-weight: 600;
+  width: 550px;
+  top:1811px;
+  left:98px;
+
+}
+
+.header2text2{
+  position: absolute;
+  font-size: 24px;
+  font-weight: 400;
+  width: 550px;
+  top:1900px;
+  left:98px;
+}
+
+
+.header-button2{
+  width:177px;
+  height:49px;
+  position: absolute;
+  top:1855px;
+  right:88px;
+  /*padding: 16px 48px;*/
+  background: linear-gradient(to right, #a0c4ff, #007bff);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 45px;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in-out;
+}
+
+.header-button2:hover {
+  background: linear-gradient(to right, #8bb7ff, #0056b3);
+}
+
+.p31{
+  position: absolute;
+  top:1968px;
+  left:108px;
+}
+
+.caption1{
+  position:absolute;
+  left:108;
+  top:2395;
+  font-size:32px;
+}
+
+.p32{
+  position: absolute;
+  top:1968px;
+  left:558px;
+}
+
+.caption2{
+  position:absolute;
+  left:558;
+  top:2395;
+  font-size:32px;
+}
+
+.p33{
+  position: absolute;
+  top:1968px;
+  left:1008px;
+}
+
+.caption3{
+  position:absolute;
+  left:1008;
+  top:2395;
+  font-size:32px;
+}
+
+
+.pb1{
+  position:absolute;
+  left:110;
+  top:2458;
+  width:187px;
+  height:49px;
+  /*padding: 16px 48px;*/
+  background: linear-gradient(to right, #a0c4ff, #007bff);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 45px;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in-out;
+}
+
+.pb1:hover {
+  background: linear-gradient(to right, #8bb7ff, #0056b3);
+}
+
+
+.pb2{
+  position:absolute;
+  left:560;
+  top:2458;
+  width:187px;
+  height:49px;
+  /*padding: 16px 48px;*/
+  background: linear-gradient(to right, #a0c4ff, #007bff);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 45px;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in-out;
+}
+
+.pb2:hover {
+  background: linear-gradient(to right, #8bb7ff, #0056b3);
+}
+
+
+.pb3{
+  position:absolute;
+  left:1010;
+  top:2458;
+  width:187px;
+  height:49px;
+  /*padding: 16px 48px;*/
+  background: linear-gradient(to right, #a0c4ff, #007bff);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 45px;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in-out;
+}
+
+.pb3:hover {
+  background: linear-gradient(to right, #8bb7ff, #0056b3);
+}
+
+
+.p34{
+  position: absolute;
+  top:2541px;
+  left:108px;
+}
+
+.caption4{
+  position: absolute;
+  left:108px;
+  top:2968px;
+  font-size:32px;
+}
+
+.p35{
+  position: absolute;
+  top:2541px;
+  left:558px;
+}
+
+.caption5{
+  position: absolute;
+  left:558px;
+  top:2968px;
+  font-size:32px;
+}
+
+.p36{
+  position: absolute;
+  top:2541px;
+  left:1008px;
+}
+
+.caption6{
+  position: absolute;
+  left:1008px;
+  top:2968px;
+  font-size:32px;
+}
+
+
+.pb4{
+  position:absolute;
+  left:110;
+  top:3031;
+  width:187px;
+  height:49px;
+  /*padding: 16px 48px;*/
+  background: linear-gradient(to right, #a0c4ff, #007bff);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 45px;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in-out;
+}
+
+.pb4:hover {
+  background: linear-gradient(to right, #8bb7ff, #0056b3);
+}
+
+
+.pb5{
+  position:absolute;
+  left:560;
+  top:3031;
+  width:187px;
+  height:49px;
+  /*padding: 16px 48px;*/
+  background: linear-gradient(to right, #a0c4ff, #007bff);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 45px;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in-out;
+}
+
+.pb5:hover {
+  background: linear-gradient(to right, #8bb7ff, #0056b3);
+}
+
+
+.pb6{
+  position:absolute;
+  left:1010;
+  top:3031;
+  width:187px;
+  height:49px;
+  /*padding: 16px 48px;*/
+  background: linear-gradient(to right, #a0c4ff, #007bff);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 45px;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in-out;
+}
+
+.pb6:hover {
+  background: linear-gradient(to right, #8bb7ff, #0056b3);
 }
 
 

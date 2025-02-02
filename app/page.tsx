@@ -110,6 +110,92 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <div className="page3">
+
+        <header className="header2">
+          <div className="header2content">
+            <span className="header2text1">Hydration Essentials</span>
+            <span className="header2text2">Discover Our Range of Premium Water Bottles</span>
+            <button className="header-button2">VIEW MORE</button>
+          </div>
+        </header>
+
+        <div className="products">
+        <Image
+            src="/p31.png"
+            alt="bottle1"
+            width={420}
+            height={420}
+            className="p31"
+          />
+
+        <p className="caption1">Rainbow 600</p>
+
+       <Image
+            src="/p32.png"
+            alt="bottle2"
+            width={420}
+            height={420}
+            className="p32"
+          />
+        <p className="caption2">Rio 650</p>
+
+        <Image
+            src="/p33.png"
+            alt="bottle3"
+            width={420}
+            height={420}
+            className="p33"
+          />
+
+        <p className="caption3">Big Bull 1300</p>
+
+        <div className="pbuttons">
+        <button className="pb1">LEARN MORE</button>
+        <button className="pb2">LEARN MORE</button>
+        <button className="pb3">LEARN MORE</button>
+        <button className="pb4">LEARN MORE</button>
+        <button className="pb5">LEARN MORE</button>
+        <button className="pb6">LEARN MORE</button>
+        </div>
+
+
+        <Image
+            src="/p34.png"
+            alt="bottle1"
+            width={420}
+            height={420}
+            className="p34"
+          />
+
+        <p className="caption4">Rome 600</p>
+
+
+        <Image
+            src="/p32.png"
+            alt="bottle2"
+            width={420}
+            height={420}
+            className="p36"
+          />
+        <p className="caption6">Rio 650</p>
+
+        <Image
+            src="/p31.png"
+            alt="bottle3"
+            width={420}
+            height={420}
+            className="p35"
+          />
+
+        <p className="caption5">Rainbow 600</p>
+
+        </div>
+
+      </div>
+
+
     </div>
   );
 }
