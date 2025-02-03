@@ -625,14 +625,126 @@ body {
 
 .rm1 {
   position: absolute; /* Fixes it to the viewport */
-  top: 3386px; /* Moves it slightly up */
-  left:100px;
+  top: 3265px;
+  left: 110px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .rm1.fade {
   opacity: 1;
+}
+
+.rm1 img {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.rm1.fade img {
+  opacity: 1;
+}
+
+/* Add a sequential fade-in for images i1 to i23 */
+.rm1 img:nth-child(1) {
+  animation: fadeIn 1s forwards 0s;
+}
+
+.rm1 img:nth-child(2) {
+  animation: fadeIn 1s forwards 0.2s;
+}
+
+.rm1 img:nth-child(3) {
+  animation: fadeIn 1s forwards 0.4s;
+}
+
+.rm1 img:nth-child(4) {
+  animation: fadeIn 1s forwards 0.6s;
+}
+
+.rm1 img:nth-child(5) {
+  animation: fadeIn 1s forwards 0.8s;
+}
+
+.rm1 img:nth-child(6) {
+  animation: fadeIn 1s forwards 1s;
+}
+
+.rm1 img:nth-child(7) {
+  animation: fadeIn 1s forwards 1.2s;
+}
+
+.rm1 img:nth-child(8) {
+  animation: fadeIn 1s forwards 1.4s;
+}
+
+.rm1 img:nth-child(9) {
+  animation: fadeIn 1s forwards 1.6s;
+}
+
+.rm1 img:nth-child(10) {
+  animation: fadeIn 1s forwards 1.8s;
+}
+
+.rm1 img:nth-child(11) {
+  animation: fadeIn 1s forwards 2s;
+}
+
+.rm1 img:nth-child(12) {
+  animation: fadeIn 1s forwards 2.2s;
+}
+
+.rm1 img:nth-child(13) {
+  animation: fadeIn 1s forwards 2.4s;
+}
+
+.rm1 img:nth-child(14) {
+  animation: fadeIn 1s forwards 2.6s;
+}
+
+.rm1 img:nth-child(15) {
+  animation: fadeIn 1s forwards 2.8s;
+}
+
+.rm1 img:nth-child(16) {
+  animation: fadeIn 1s forwards 3s;
+}
+
+.rm1 img:nth-child(17) {
+  animation: fadeIn 1s forwards 3.2s;
+}
+
+.rm1 img:nth-child(18) {
+  animation: fadeIn 1s forwards 3.4s;
+}
+
+.rm1 img:nth-child(19) {
+  animation: fadeIn 1s forwards 3.6s;
+}
+
+.rm1 img:nth-child(20) {
+  animation: fadeIn 1s forwards 3.8s;
+}
+
+.rm1 img:nth-child(21) {
+  animation: fadeIn 1s forwards 4s;
+}
+
+.rm1 img:nth-child(22) {
+  animation: fadeIn 1s forwards 4.2s;
+}
+
+.rm1 img:nth-child(23) {
+  animation: fadeIn 1s forwards 4.4s;
+}
+
+/* Keyframes for image fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
