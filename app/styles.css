@@ -363,10 +363,30 @@ body {
   background: linear-gradient(to right, #8bb7ff, #0056b3);
 }
 
-.p31{
+.p31 {
   position: absolute;
-  top:1968px;
-  left:108px;
+  top: 1968px;
+  left: 108px;
+}
+
+.p31, .p32, .p33, .p34, .p35, .p36 {
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.p31:hover, .p32:hover, .p33:hover, .p34:hover, .p35:hover, .p36:hover {
+  transform: scale(1.05); /* Increases size by 5% while keeping the center fixed */
+}
+
+.caption1, .caption2, .caption3, .caption4, .caption5, .caption6{
+  position: absolute;
+  color: black;
+  cursor:pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.caption1:hover, .caption2:hover, .caption3:hover, .caption4:hover, .caption5:hover, .caption6:hover {
+  color: #918f8a;
 }
 
 .caption1{
