@@ -7,51 +7,49 @@ import "./styles.css";
 export default function Home() {
   const [shouldFadeRoadmap, setShouldFadeRoadmap] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const images = Array.from({ length: 23 }, (_, index) => `/i${index + 1}.png`);
+  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`); // Ensure index starts from 0 to 22
 
   useEffect(() => {
-    // Ensure the page always starts at the top on reload
-    const resetScroll = () => {
-      window.scrollTo(0, 0);
-    };
-
+    // Ensure the page starts at the top on reload
+    const resetScroll = () => window.scrollTo(0, 0);
+    
     resetScroll();
     window.addEventListener("load", resetScroll);
 
     setTimeout(() => {
       resetScroll();
-      let start = window.scrollY;
-      let end = start + 860;
-      let duration = 2000;
+      const startY = window.scrollY;
+      const targetY = startY + 860;
+      const duration = 2000;
       let startTime = null;
 
-      function scrollStep(timestamp) {
+      const smoothScroll = (timestamp) => {
         if (!startTime) startTime = timestamp;
-        let progress = timestamp - startTime;
-        let scrollPosition = Math.min(start + (progress / duration) * 860, end);
+        const progress = timestamp - startTime;
+        const scrollPosition = Math.min(startY + (progress / duration) * 860, targetY);
         window.scrollTo(0, scrollPosition);
 
-        if (progress < duration) {
-          requestAnimationFrame(scrollStep);
-        }
-      }
+        if (progress < duration) requestAnimationFrame(smoothScroll);
+      };
 
-      requestAnimationFrame(scrollStep);
+      requestAnimationFrame(smoothScroll);
     }, 4000);
 
     const handleScroll = () => {
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      const scrollTop = window.scrollY;
-      
-      // Calculate if we're at the bottom of the page and trying to scroll further
-      const isAtBottom = windowHeight + scrollTop >= documentHeight - 50; // Adding small buffer
-      setShouldFadeRoadmap(isAtBottom);
+      requestAnimationFrame(() => {
+        const { innerHeight, scrollY } = window;
+        const { scrollHeight } = document.documentElement;
+        
+        // Check if the user has reached the bottom
+        const isAtBottom = innerHeight + scrollY >= scrollHeight - 50;
+        setShouldFadeRoadmap(isAtBottom);
 
-      // If the user has reached the bottom of the page, trigger the image transition
-      if (isAtBottom) {
-        setCurrentImage((prev) => (prev + 1) % images.length); // Loop through images
-      }
+        if (isAtBottom) {
+          setTimeout(() => {
+            setCurrentImage((prev) => (prev + 1 < images.length ? prev + 1 : 0));
+          }, 1500); // Smoother transition delay
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -60,7 +58,9 @@ export default function Home() {
       window.removeEventListener("load", resetScroll);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [images.length]); // Dependency array for handleScroll and image transitions
+  }, [images.length]);
+
+
 
   return (
     <div className="page-container">
