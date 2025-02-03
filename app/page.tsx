@@ -265,7 +265,22 @@ export default function Home() {
         <p className="footer-text">About</p>
         <p className="footer-text">Journal</p>
         <p className="footer-text">Custom</p>
+
       </div>
+
+      <div className="footer2">
+
+        <p className="footer2-text">FAQ's</p>
+        <p className="footer2-text">Returns</p>
+        <p className="footer2-text">Ordering</p>
+        <p className="footer2-text">Shipping</p>
+        <p className="footer2-text">Personalization Policies</p>
+
+      </div>
+
+      <p className="copyright">
+        Copyright &copy;2023 BOTOL.All Rights Reserved.
+      </p>
 
         
       </div>

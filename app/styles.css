@@ -46,6 +46,10 @@ body {
   transition: color 0.3s ease;
 }
 
+.header-text:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
 /* Header Button */
 .header-button {
   padding: 12px 36px;
@@ -674,8 +678,43 @@ body {
   color: #ffcc00; /* Change color on hover */
 }
 
-.header-text:hover {
+
+.footer2{
+  position: absolute;
+  width: 795px; /* Full width */
+  display: flex;
+  align-items: center;
+  right:0px;
+  top:3940px;
+}
+
+.footer2-text {
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0 25px; /* Adjust spacing between items */
+  font-family: 'Familjen Grotesk', serif;
+  color: white;
+  cursor: pointer; /* Makes it feel interactive */
+  transition: color 0.3s ease;
+}
+
+.footer2-text:hover {
   color: #ffcc00; /* Change color on hover */
+}
+
+.copyright {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center text inside */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  top: 4025px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Familjen Grotesk', serif;
+  color: #858585;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 
