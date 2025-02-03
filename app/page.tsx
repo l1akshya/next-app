@@ -1,10 +1,12 @@
 "use client"; 
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import "./styles.css";
 
 export default function Home() {
+
+  const [shouldFadeRoadmap, setShouldFadeRoadmap] = useState(false);
   useEffect(() => {
     // Ensure the page always starts at the top on reload
     const resetScroll = () => {
@@ -35,10 +37,26 @@ export default function Home() {
       requestAnimationFrame(scrollStep);
     }, 4000);
 
+
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+      
+      // Calculate if we're at the bottom of the page and trying to scroll further
+      const isAtBottom = windowHeight + scrollTop >= documentHeight - 50; // Adding small buffer
+      setShouldFadeRoadmap(isAtBottom);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("load", resetScroll);
+      window.removeEventListener("load", resetScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
 
   return (
     <div className="page-container">
@@ -46,6 +64,10 @@ export default function Home() {
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
         rel="stylesheet"
       />
+
+      <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap" 
+       rel="stylesheet" />
+
 
 
       <header className="header">
@@ -211,12 +233,20 @@ export default function Home() {
 
       <div className="page4">
 
-        <Image 
-        src="/r1.png" 
-        alt="bottle2" 
-        width={1520} 
-        height={552} 
-        className="roadmap1"/>
+      <Image 
+          src="/r1.png" 
+          alt="roadmap" 
+          width={1520} 
+          height={552} 
+          className={`roadmap1 ${shouldFadeRoadmap ? 'fade' : ''}`}
+        />
+
+      <div className={`plt ${shouldFadeRoadmap ? 'fade' : ''}`}>
+        <p className="plt1">YOUR TRANSFORMATION, ONE STEP AT A TIME</p>
+        <p className="plt2">Fitness is a journey—every day brings</p>
+        <p className="plt3">you closer to the life you want</p>
+      </div>
+
 
         <div className="p4r1"></div>
         <div className="p4r2"></div>
@@ -281,6 +311,17 @@ export default function Home() {
       <p className="copyright">
         Copyright &copy;2023 BOTOL.All Rights Reserved.
       </p>
+
+
+      <Image 
+        src="/i1.png" 
+        alt="roadmap" 
+        width={1002.7} 
+        height={381.766} 
+        className={`rm1 ${shouldFadeRoadmap ? 'fade' : ''}`}
+      />
+
+      
 
         
       </div>
