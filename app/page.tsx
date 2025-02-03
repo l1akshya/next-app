@@ -227,8 +227,50 @@ export default function Home() {
         width={217.7} 
         height={50} 
         className="logo2"/>
+
+      <div className="socialmedia">
+        <button className="l1">
+          <Image 
+            src="/l1.png" 
+            alt="logofacebook" 
+            width={34} 
+            height={34} 
+          />
+        </button>
+
+        <button className="l2">
+          <Image 
+            src="/l2.png" 
+            alt="logoinstagram" 
+            width={34} 
+            height={34} 
+          />
+        </button>
+
+        <button className="l3">
+          <Image 
+            src="/l3.png" 
+            alt="logotwitter" 
+            width={34} 
+            height={34} 
+          />
+        </button>
+      </div>
+
+
+      <div className="footer">
+
+        <p className="footer-text">Shop</p>
+        <p className="footer-text">Contact us</p>
+        <p className="footer-text">About</p>
+        <p className="footer-text">Journal</p>
+        <p className="footer-text">Custom</p>
+      </div>
+
         
       </div>
+
+
     </div>
   );
 }
