@@ -21,9 +21,9 @@ export default function Home() {
       const startY = window.scrollY;
       const targetY = startY + 860;
       const duration = 2000;
-      let startTime = null;
+      let startTime: number = 0;
 
-      const smoothScroll = (timestamp) => {
+      const smoothScroll = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
         const progress = timestamp - startTime;
         const scrollPosition = Math.min(startY + (progress / duration) * 860, targetY);
