@@ -1,24 +1,30 @@
-"use client";  // Add this directive to indicate this is a client-side component
+"use client"; 
 
 import { useEffect } from "react";
 import Image from "next/image";
-import "./styles.css"; // Import the CSS file
+import "./styles.css";
 
 export default function Home() {
-  // useEffect hook to trigger scroll after 4 seconds
   useEffect(() => {
-    // Timeout to delay the scroll action
+    // Ensure the page always starts at the top on reload
+    const resetScroll = () => {
+      window.scrollTo(0, 0);
+    };
+
+    resetScroll();
+    window.addEventListener("load", resetScroll);
+
     setTimeout(() => {
-      let start = window.scrollY;  // Current scroll position
-      let end = start + 860;        // Target position after scrolling (changed to 860 pixels)
-      let duration = 2000;          // Duration for the scroll (2 seconds)
+      resetScroll();
+      let start = window.scrollY;
+      let end = start + 860;
+      let duration = 2000;
       let startTime = null;
 
-      // Scroll function that smoothly scrolls the window down
-      function scrollStep(timestamp: number) {
+      function scrollStep(timestamp) {
         if (!startTime) startTime = timestamp;
         let progress = timestamp - startTime;
-        let scrollPosition = Math.min(start + (progress / duration) * 860, end);  // Changed to 860 pixels
+        let scrollPosition = Math.min(start + (progress / duration) * 860, end);
         window.scrollTo(0, scrollPosition);
 
         if (progress < duration) {
@@ -26,10 +32,13 @@ export default function Home() {
         }
       }
 
-      // Start the scroll animation after 4 seconds
       requestAnimationFrame(scrollStep);
-    }, 4000); // Wait 4 seconds before starting the scroll
-  }, []); // Empty dependency array to run once when component mounts
+    }, 4000);
+
+    return () => {
+      window.removeEventListener("load", resetScroll);
+    };
+  }, []);
 
   return (
     <div className="page-container">
@@ -37,14 +46,19 @@ export default function Home() {
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
         rel="stylesheet"
       />
+
+
       <header className="header">
+
         <div className="header-content">
+
           <span className="header-text">Shop</span>
           <span className="header-text">Contact us</span>
           <span className="header-text">About</span>
           <span className="header-text">Journal</span>
           <span className="header-text">Custom</span>
           <button className="header-button">Inquiry Now</button>
+
         </div>
       </header>
 
@@ -111,8 +125,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="page3">
 
+
+
+
+      <div className="page3">
         <header className="header2">
           <div className="header2content">
             <span className="header2text1">Hydration Essentials</span>
@@ -122,80 +139,96 @@ export default function Home() {
         </header>
 
         <div className="products">
-        <Image
-            src="/p31.png"
-            alt="bottle1"
-            width={420}
-            height={420}
-            className="p31"
-          />
 
-        <p className="caption1">Rainbow 600</p>
+          <Image 
+          src="/p31.png" 
+          alt="bottle1" 
+          width={420} 
+          height={420} 
+          className="p31"/>
 
-       <Image
-            src="/p32.png"
-            alt="bottle2"
-            width={420}
-            height={420}
-            className="p32"
-          />
-        <p className="caption2">Rio 650</p>
+          <p className="caption1">Rainbow 600</p>
 
-        <Image
-            src="/p33.png"
-            alt="bottle3"
-            width={420}
-            height={420}
-            className="p33"
-          />
+          <Image 
+          src="/p32.png" 
+          alt="bottle2" 
+          width={420} 
+          height={420} 
+          className="p32"/>
 
-        <p className="caption3">Big Bull 1300</p>
+          <p className="caption2">Rio 650</p>
 
-        <div className="pbuttons">
-        <button className="pb1">LEARN MORE</button>
-        <button className="pb2">LEARN MORE</button>
-        <button className="pb3">LEARN MORE</button>
-        <button className="pb4">LEARN MORE</button>
-        <button className="pb5">LEARN MORE</button>
-        <button className="pb6">LEARN MORE</button>
-        </div>
+          <Image 
+          src="/p33.png" 
+          alt="bottle3" 
+          width={420} 
+          height={420} 
+          className="p33"/>
 
+          <p className="caption3">Big Bull 1300</p>
 
-        <Image
-            src="/p34.png"
-            alt="bottle1"
-            width={420}
-            height={420}
-            className="p34"
-          />
-
-        <p className="caption4">Rome 600</p>
+          <div className="pbuttons">
+            <button className="pb1">LEARN MORE</button>
+            <button className="pb2">LEARN MORE</button>
+            <button className="pb3">LEARN MORE</button>
+            <button className="pb4">LEARN MORE</button>
+            <button className="pb5">LEARN MORE</button>
+            <button className="pb6">LEARN MORE</button>
+          </div>
 
 
-        <Image
-            src="/p32.png"
-            alt="bottle2"
-            width={420}
-            height={420}
-            className="p36"
-          />
-        <p className="caption6">Rio 650</p>
+          <Image 
+          src="/p34.png" 
+          alt="bottle1" 
+          width={420} 
+          height={420} 
+          className="p34"/>
 
-        <Image
-            src="/p31.png"
-            alt="bottle3"
-            width={420}
-            height={420}
-            className="p35"
-          />
+          <p className="caption4">Rome 600</p>
 
-        <p className="caption5">Rainbow 600</p>
+          <Image 
+          src="/p32.png" 
+          alt="bottle2" 
+          width={420} 
+          height={420} 
+          className="p36"/>
+
+          <p className="caption6">Rio 650</p>
+
+          <Image 
+          src="/p31.png" 
+          alt="bottle3" 
+          width={420} 
+          height={420} 
+          className="p35"/>
+
+          <p className="caption5">Rainbow 600</p>
 
         </div>
-
       </div>
 
 
+
+      <div className="page4">
+
+        <Image 
+        src="/r1.png" 
+        alt="bottle2" 
+        width={1520} 
+        height={552} 
+        className="roadmap1"/>
+
+        <div className="p4r1"></div>
+        <div className="p4r2"></div>
+
+        <Image 
+        src="/p9.png" 
+        alt="logowhite" 
+        width={217.7} 
+        height={50} 
+        className="logo2"/>
+        
+      </div>
     </div>
   );
 }

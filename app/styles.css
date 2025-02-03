@@ -3,7 +3,7 @@
 /* Global Styles */
 body {
   font-family: 'Familjen Grotesk', sans-serif;
-  height:3400px;
+  height:4053px;
 }
 
 /* Root Variables */
@@ -580,6 +580,45 @@ body {
   background: linear-gradient(to right, #8bb7ff, #0056b3);
 }
 
+
+
+
+
+
+/*roadmap page 4 starts here*/
+
+.roadmap1{
+  position: absolute;
+  top:3245px;
+  left:0px;
+}
+
+
+
+.p4r1{
+  position: absolute;
+  height:216;
+  width:1519;
+  top:3797;
+  left:0;
+  background-color: #201F1F;
+}
+
+.p4r2{
+  position: absolute;
+  height:40;
+  width:1519;
+  top:4013;
+  left:0;
+  background-color:#323232;
+}
+
+
+.logo2{
+  position:absolute;
+  top:3840px;
+  left:110px;
+}
 
 /* Font Styles */
 .familjen-grotesk-bold {
