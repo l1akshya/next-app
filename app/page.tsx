@@ -7,7 +7,7 @@ import "./styles.css";
 export default function Home() {
   const [shouldFadeRoadmap, setShouldFadeRoadmap] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`); // Ensure index starts from 0 to 22
+  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`); // Ensure index starts from 0 to 23
 
   useEffect(() => {
     // Ensure the page starts at the top on reload
@@ -223,7 +223,7 @@ export default function Home() {
         </div>
 
         <div className="footer2">
-          <p className="footer2-text">FAQ's</p>
+          <p className="footer2-text">FAQ &apos;s</p>
           <p className="footer2-text">Returns</p>
           <p className="footer2-text">Ordering</p>
           <p className="footer2-text">Shipping</p>
