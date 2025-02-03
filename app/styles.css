@@ -391,8 +391,8 @@ body {
 
 .caption1{
   position:absolute;
-  left:108;
-  top:2395;
+  left:108px;
+  top:2395px;
   font-size:32px;
 }
 
@@ -403,9 +403,10 @@ body {
 }
 
 .caption2{
+
   position:absolute;
-  left:558;
-  top:2395;
+  left:558px;
+  top:2395px;
   font-size:32px;
 }
 
@@ -417,16 +418,16 @@ body {
 
 .caption3{
   position:absolute;
-  left:1008;
-  top:2395;
+  left:1008px;
+  top:2395px;
   font-size:32px;
 }
 
 
 .pb1{
   position:absolute;
-  left:110;
-  top:2458;
+  left:110px;
+  top:2458px;
   width:187px;
   height:49px;
   /*padding: 16px 48px;*/
@@ -449,8 +450,8 @@ body {
 
 .pb2{
   position:absolute;
-  left:560;
-  top:2458;
+  left:560px;
+  top:2458px;
   width:187px;
   height:49px;
   /*padding: 16px 48px;*/
@@ -473,8 +474,8 @@ body {
 
 .pb3{
   position:absolute;
-  left:1010;
-  top:2458;
+  left:1010px;
+  top:2458px;
   width:187px;
   height:49px;
   /*padding: 16px 48px;*/
@@ -537,8 +538,8 @@ body {
 
 .pb4{
   position:absolute;
-  left:110;
-  top:3031;
+  left:110px;
+  top:3031px;
   width:187px;
   height:49px;
   /*padding: 16px 48px;*/
@@ -561,8 +562,8 @@ body {
 
 .pb5{
   position:absolute;
-  left:560;
-  top:3031;
+  left:560px;
+  top:3031px;
   width:187px;
   height:49px;
   /*padding: 16px 48px;*/
@@ -585,8 +586,8 @@ body {
 
 .pb6{
   position:absolute;
-  left:1010;
-  top:3031;
+  left:1010px;
+  top:3031px;
   width:187px;
   height:49px;
   /*padding: 16px 48px;*/
@@ -751,19 +752,19 @@ body {
 
 .p4r1{
   position: absolute;
-  height:216;
-  width:1519;
-  top:3797;
-  left:0;
+  height:216px;
+  width:1519px;
+  top:3797px;
+  left:0px;
   background-color: #201F1F;
 }
 
 .p4r2{
   position: absolute;
-  height:40;
-  width:1519;
-  top:4013;
-  left:0;
+  height:40px;
+  width:1519px;
+  top:4013px;
+  left:0px;
   background-color:#323232;
 }
 
@@ -825,7 +826,6 @@ body {
 .footer-text:hover {
   color: #ffcc00; /* Change color on hover */
 }
-
 
 .footer2{
   position: absolute;
