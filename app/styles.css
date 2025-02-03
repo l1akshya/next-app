@@ -4,17 +4,6 @@
 body {
   font-family: 'Familjen Grotesk', sans-serif;
   height:4053px;
-  min-width: 1024px;
-  zoom: 1;
-  max-width: 1440px;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-@media screen and (max-width: 1440px) {
-  html, body {
-    zoom: 0.5; /* Scales down content proportionally */
-  }
 }
 
 /* Root Variables */

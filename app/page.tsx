@@ -7,26 +7,52 @@ import "./styles.css";
 export default function Home() {
   const [shouldFadeRoadmap, setShouldFadeRoadmap] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`);
+  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`); // Ensure index starts from 0 to 23
 
   useEffect(() => {
-    // Prevent mobile scaling and zooming
-    const metaViewport = document.querySelector('meta[name="viewport"]');
-    if (!metaViewport) {
-      const meta = document.createElement('meta');
-      meta.name = "viewport";
-      meta.content = "width=1440, initial-scale=1, maximum-scale=1, user-scalable=no";
-      document.head.appendChild(meta);
-    }
-
-    // Existing scroll and image logic remains the same
+    // Ensure the page starts at the top on reload
     const resetScroll = () => window.scrollTo(0, 0);
     
     resetScroll();
     window.addEventListener("load", resetScroll);
 
-    // Rest of the existing useEffect logic remains unchanged
-    // ... [previous useEffect code]
+    setTimeout(() => {
+      resetScroll();
+      const startY = window.scrollY;
+      const targetY = startY + 860;
+      const duration = 2000;
+      let startTime: number = 0;
+
+      const smoothScroll = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const scrollPosition = Math.min(startY + (progress / duration) * 860, targetY);
+        window.scrollTo(0, scrollPosition);
+
+        if (progress < duration) requestAnimationFrame(smoothScroll);
+      };
+
+      requestAnimationFrame(smoothScroll);
+    }, 4000);
+
+    const handleScroll = () => {
+      requestAnimationFrame(() => {
+        const { innerHeight, scrollY } = window;
+        const { scrollHeight } = document.documentElement;
+        
+        // Check if the user has reached the bottom
+        const isAtBottom = innerHeight + scrollY >= scrollHeight - 50;
+        setShouldFadeRoadmap(isAtBottom);
+
+        if (isAtBottom) {
+          setTimeout(() => {
+            setCurrentImage((prev) => (prev + 1 < images.length ? prev + 1 : 0));
+          }, 1500); // Smoother transition delay
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("load", resetScroll);
@@ -34,21 +60,10 @@ export default function Home() {
     };
   }, [images.length]);
 
+
+
   return (
-    <div className="page-container" style={{
-      // Force desktop width and prevent mobile scaling
-      width: '1440px', 
-      margin: '0 auto', 
-      overflow: 'hidden',
-      position: 'relative'
-    }}>
-      {/* Add meta viewport tag in the component for extra assurance */}
-      <head>
-        <meta 
-          name="viewport" 
-          content="width=1440, initial-scale=1, maximum-scale=1, user-scalable=no" 
-        />
-      </head>
+    <div className="page-container">
       <link
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
         rel="stylesheet"
