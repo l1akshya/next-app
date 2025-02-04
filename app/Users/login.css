@@ -15,14 +15,13 @@ body {
 
 
 .page-container {
-  max-width: 1280px; /* Set a max width for the container */
+  width: 1280px; /* Fixed width for desktop */
   margin: 0 auto; /* Center the container */
-  overflow: hidden; /* Prevent overflow */
 }
 
 @media (max-width: 1280px) {
   .page-container {
-    width: 1280px; /* Force the width to 1280px on smaller screens */
+    width: 100%; /* Allow full width on smaller screens */
     overflow-x: auto; /* Allow horizontal scrolling if necessary */
   }
 }
