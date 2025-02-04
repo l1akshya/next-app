@@ -889,7 +889,6 @@ body {
   top: 3457px;
   left: 50%;
   transform: translateX(-50%);
-  width:591px;
   height:128px;
   width:100%;
   transition: opacity 0.8s ease-in-out;
