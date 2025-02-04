@@ -887,11 +887,20 @@ body {
   text-align: center;
   position: absolute;
   top: 3457px;
-  left: 104.5px;
-  height:128px;
-  width:100%;
+  left: 50%; /* Center on desktop */
+  transform: translateX(-50%); /* Ensure it stays centered */
+  height: 128px;
+  width: 100%;
   transition: opacity 0.8s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .plt {
+    left: 104.5px; /* Use the given left coordinate for phones */
+    transform: none; /* Remove the translateX for phones since we're using a fixed left value */
+  }
+}
+
 
 .plt.fade {
   opacity: 0;
