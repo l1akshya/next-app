@@ -386,6 +386,7 @@ body {
   color: black;
   cursor:pointer;
   transition: transform 0.3s ease-in-out;
+  white-space: nowrap;
 }
 
 .caption1:hover, .caption2:hover, .caption3:hover, .caption4:hover, .caption5:hover, .caption6:hover {
