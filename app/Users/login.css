@@ -6,21 +6,6 @@ body {
   height:4053px;
 }
 
-
-
-html, body {
-  width: 1280px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow-x: hidden !important;
-}
-
-#__next {
-  width: 1280px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow-x: hidden !important;
-}
 /* Root Variables */
 :root {
   --ring-thickness: 10px;
@@ -33,6 +18,7 @@ body {
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 /* Logo */
 .logo {
   position: absolute;

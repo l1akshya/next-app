@@ -7,15 +7,9 @@ import "./login.css";
 export default function Home() {
   const [shouldFadeRoadmap, setShouldFadeRoadmap] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`);
+  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`); // Ensure index starts from 0 to 23
 
   useEffect(() => {
-    // Add a meta tag programmatically to ensure it's added after mount
-    const meta = document.createElement('meta');
-    meta.name = 'viewport';
-    meta.content = 'width=1280, minimum-scale=0.25, maximum-scale=1.0';
-    document.getElementsByTagName('head')[0].appendChild(meta);
-
     // Ensure the page starts at the top on reload
     const resetScroll = () => window.scrollTo(0, 0);
     
@@ -27,9 +21,9 @@ export default function Home() {
       const startY = window.scrollY;
       const targetY = startY + 860;
       const duration = 2000;
-      let startTime = 0;
+      let startTime: number = 0;
 
-      const smoothScroll = (timestamp) => {
+      const smoothScroll = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
         const progress = timestamp - startTime;
         const scrollPosition = Math.min(startY + (progress / duration) * 860, targetY);
@@ -46,13 +40,14 @@ export default function Home() {
         const { innerHeight, scrollY } = window;
         const { scrollHeight } = document.documentElement;
         
+        // Check if the user has reached the bottom
         const isAtBottom = innerHeight + scrollY >= scrollHeight - 50;
         setShouldFadeRoadmap(isAtBottom);
 
         if (isAtBottom) {
           setTimeout(() => {
             setCurrentImage((prev) => (prev + 1 < images.length ? prev + 1 : 0));
-          }, 1500);
+          }, 1500); // Smoother transition delay
         }
       });
     };
@@ -66,30 +61,9 @@ export default function Home() {
   }, [images.length]);
 
   return (
-    <>
-      <style jsx global>{`
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        
-        html, body {
-          width: 1280px;
-          margin: 0;
-          padding: 0;
-          overflow-x: hidden;
-        }
-
-        .page-container {
-          width: 1280px;
-          margin: 0;
-          padding: 0;
-          overflow-x: hidden;
-        }
-      `}</style>
-      
-      <div className="page-container">
+    <div className="page-container">
+      <head>
+      <meta name="viewport" content="initial-scale=0.25, user-scalable=no, width=1280" />
         <link
           href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
           rel="stylesheet"
@@ -98,17 +72,18 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap"
           rel="stylesheet"
         />
+      </head>
 
-        <header className="header">
-          <div className="header-content">
-            <span className="header-text">Shop</span>
-            <span className="header-text">Contact us</span>
-            <span className="header-text">About</span>
-            <span className="header-text">Journal</span>
-            <span className="header-text">Custom</span>
-            <button className="header-button">Inquiry Now</button>
-          </div>
-        </header>
+      <header className="header">
+        <div className="header-content">
+          <span className="header-text">Shop</span>
+          <span className="header-text">Contact us</span>
+          <span className="header-text">About</span>
+          <span className="header-text">Journal</span>
+          <span className="header-text">Custom</span>
+          <button className="header-button">Inquiry Now</button>
+        </div>
+      </header>
 
       <div className="logo-container">
            <Image
