@@ -4,30 +4,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import "./styles.css";
 
-// Utility function to get cookie value
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-  return null;
-}
-
 export default function Home() {
   const [shouldFadeRoadmap, setShouldFadeRoadmap] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`);
+  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`); // Ensure index starts from 0 to 23
 
   useEffect(() => {
-    // Set viewport based on view-mode cookie
-    const viewMode = getCookie("view-mode");
-    const viewport = document.querySelector("meta[name=viewport]");
-    
-    if (viewMode === "desktop") {
-      viewport.setAttribute('content', 'width=1024');
-    } else if (viewMode === "mobile") {
-      viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
-    }
-
     // Ensure the page starts at the top on reload
     const resetScroll = () => window.scrollTo(0, 0);
     
@@ -39,9 +21,9 @@ export default function Home() {
       const startY = window.scrollY;
       const targetY = startY + 860;
       const duration = 2000;
-      let startTime = 0;
+      let startTime: number = 0;
 
-      const smoothScroll = (timestamp) => {
+      const smoothScroll = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
         const progress = timestamp - startTime;
         const scrollPosition = Math.min(startY + (progress / duration) * 860, targetY);
@@ -65,7 +47,7 @@ export default function Home() {
         if (isAtBottom) {
           setTimeout(() => {
             setCurrentImage((prev) => (prev + 1 < images.length ? prev + 1 : 0));
-          }, 1500);
+          }, 1500); // Smoother transition delay
         }
       });
     };
@@ -78,12 +60,15 @@ export default function Home() {
     };
   }, [images.length]);
 
+
+
   return (
     <div className="page-container">
       <link
         href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
         rel="stylesheet"
       />
+
       <link
         href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap"
         rel="stylesheet"
@@ -260,3 +245,8 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+
+
