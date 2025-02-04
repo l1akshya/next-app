@@ -84,6 +84,7 @@ body {
   position: absolute;
   top: 450px;
   left: 695.18px;
+  white-space: nowrap; /* Prevents text from wrapping */
   animation: transformText 2s ease-in-out 1s forwards;
 }
 
@@ -99,6 +100,7 @@ body {
     left: 227px;
   }
 }
+
 
 .t2{
   font-family: 'Familjen Grotesk', serif;
