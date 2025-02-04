@@ -772,7 +772,7 @@ body {
 
 @media (max-width: 768px) {
   .roadmap1 {
-    width: 100%;
+    width: 129vw;
     background-size: cover; /* Take full width of the screen on smaller devices */
     max-width: none; /* Remove max-width restriction */
   }
