@@ -766,7 +766,7 @@ body {
   left: 0;
   transition: opacity 0.3s ease;
   opacity: 1;
-  width: 100vw; /* Use viewport width for better scaling */
+  width: 101vw; /* Use viewport width for better scaling */
   max-width: 1520px; /* Set a maximum width for larger screens */
   height: auto; /* Ensure aspect ratio is maintained */
 }
