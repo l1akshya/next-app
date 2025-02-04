@@ -84,21 +84,22 @@ body {
   position: absolute;
   top: 450px;
   left: 50%; /* Center the element horizontally */
-  transform: translateX(-50%); /* Offset the left position by 50% of the element’s width */
+  transform: translateX(-50%);
   animation: transformText 2s ease-in-out 1s forwards;
 }
-
 
 @keyframes transformText {
   from {
     font-size: 10px;
     top: 450px;
-    left: 695.18px;
+    left: 50%; /* Center the element horizontally */
+    transform: translateX(-50%);
   }
   to {
     font-size: 96px;
     top: 265px;
-    left: 227px;
+    left: 50%; /* Center the element horizontally */
+    transform: translateX(-50%);
   }
 }
 
@@ -108,7 +109,7 @@ body {
   font-size: 3.12px;
   position: absolute;
   top: 480px;
-  left: 50%;
+  left: 50%; /* Center the element horizontally */
   transform: translateX(-50%);
   animation: transformText2 2s ease-in-out 1s forwards;
 }
@@ -117,12 +118,14 @@ body {
   from {
     font-size: 3.12px;
     top: 480px;
-    left: 725.18px;
+    left: 50%; /* Center the element horizontally */
+    transform: translateX(-50%);
   }
   to {
     font-size: 30px;
     top: 545px;
-    left: 515px;
+    left: 50%; /* Center the element horizontally */
+    transform: translateX(-50%);
   }
 }
 
