@@ -884,21 +884,21 @@ body {
   font-family: 'Urbanist';
   font-weight: 400;
   text-align: center;
-  position: absolute;
-  top: 3457px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%; /* Ensure the element spans the full width of its container */
-  max-width: 591px; /* Set a max-width for desktop */
+  position: relative; /* Change to relative */
+  top: 3457px; /* You can adjust this based on your needs */
+  width: 100%;
+  max-width: 591px; /* You can set max-width to control scaling on larger screens */
   height: 128px;
   transition: opacity 0.8s ease-in-out;
+  margin: 0 auto; /* Center horizontally */
 }
 
 @media (max-width: 768px) {
   .plt {
-    max-width: 100%; /* Remove the max-width restriction for mobile */
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%; /* Ensure full width on smaller screens */
+    max-width: 100%; /* Remove max-width restriction */
+    left: 0;
+    transform: none; /* Remove transform for mobile */
   }
 }
 
