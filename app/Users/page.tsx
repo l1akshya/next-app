@@ -10,9 +10,26 @@ export default function Home() {
   const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`); // Ensure index starts from 0 to 23
 
   useEffect(() => {
+    // Adjust zoom for phones
+    const adjustZoom = () => {
+      if (window.innerWidth < 768) {
+        document.querySelector('meta[name="viewport"]').setAttribute(
+          "content",
+          "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        );
+      } else {
+        document.querySelector('meta[name="viewport"]').setAttribute(
+          "content",
+          "width=1280"
+        );
+      }
+    };
+
+    adjustZoom();
+    window.addEventListener("resize", adjustZoom);
+
     // Ensure the page starts at the top on reload
     const resetScroll = () => window.scrollTo(0, 0);
-    
     resetScroll();
     window.addEventListener("load", resetScroll);
 
@@ -57,13 +74,14 @@ export default function Home() {
     return () => {
       window.removeEventListener("load", resetScroll);
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", adjustZoom);
     };
   }, [images.length]);
 
   return (
     <div className="page-container">
       <head>
-        <meta name="viewport" content="width=1280" /> {/* Fixed width for desktop */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> {/* Allow zoom and scaling */}
         <link
           href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
           rel="stylesheet"
@@ -73,6 +91,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </head>
+
 
       <header className="header">
         <div className="header-content">
