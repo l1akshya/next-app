@@ -758,7 +758,7 @@ body {
 
 .roadmap1 {
   position: absolute;
-  bottom: 256px;
+  top: 3245px;
   left: 0px;
   transition: opacity 0.3s ease;
   opacity: 1;
