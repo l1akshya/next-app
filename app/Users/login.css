@@ -20,11 +20,10 @@ body {
   left: 96px;
 }
 
-/* Header */
 .header {
   position: absolute;
   top: 41px;
-  right: 20px;
+  left: calc(1520px - 760px); /* Adjust from left so it stays in the same position */
   display: flex;
   align-items: center;
   gap: 30px;
@@ -69,6 +68,8 @@ body {
 .header-button:hover {
   background: linear-gradient(to right, #8bb7ff, #0056b3);
 }
+
+
 
 /* Logo Container */
 .logo-container {
