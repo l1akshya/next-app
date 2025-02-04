@@ -905,8 +905,8 @@ body {
 /* On mobile, shift the element more to the right */
 @media (max-width: 768px) {
   .plt {
-    left: 70%; /* Move it towards the right */
-    transform: translateX(-70%); /* Adjust the shift for the new position */
+    left: 90%; /* Move it towards the right */
+    transform: translateX(-90%); /* Adjust the shift for the new position */
     max-width: 100%; /* Allow full width on mobile */
   }
 }
