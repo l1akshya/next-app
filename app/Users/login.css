@@ -880,13 +880,6 @@ body {
   color: #858585;
   white-space: nowrap; /* Prevent text from wrapping */
 }
-/* Parent container for flexbox centering */
-.parent-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh; /* Full height for the container */
-}
 
 .plt {
   font-family: 'Urbanist';
@@ -894,24 +887,11 @@ body {
   text-align: center;
   position: absolute;
   top: 3457px;
-  left: 50%; /* Start at 50% from the left on desktop */
-  transform: translateX(-50%); /* Center horizontally on desktop */
-  width: 100%; /* Make the width flexible */
-  max-width: 591px; /* Maximum width for desktop */
-  height: 128px;
+  left: 464.5px;
+  height:128px;
+  width:100%;
   transition: opacity 0.8s ease-in-out;
 }
-
-/* On mobile, shift the element more to the right */
-@media (max-width: 768px) {
-  .plt {
-    left: 90%; /* Move it towards the right */
-    transform: translateX(-90%); /* Adjust the shift for the new position */
-    max-width: 100%; /* Allow full width on mobile */
-  }
-}
-
-
 
 .plt.fade {
   opacity: 0;
