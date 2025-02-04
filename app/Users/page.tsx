@@ -63,23 +63,7 @@ export default function Home() {
   return (
     <div className="page-container"style={{ width: '1280px', margin: '0', padding: '0', overflow: 'hidden' }}>
       <head>
-      <meta name="viewport" content="width=1280, initial-scale=0.1" />
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            html, body {
-              width: 1280px !important;
-              margin: 0 !important;
-              padding: 0 !important;
-              overflow-x: hidden !important;
-            }
-            .page-container {
-              width: 1280px !important;
-              margin: 0 !important;
-              padding: 0 !important;
-              overflow-x: hidden !important;
-            }
-          `
-        }} />
+      <meta name="viewport" content="initial-scale=0.25, user-scalable=no, width=1280" />
         <link
           href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
           rel="stylesheet"
