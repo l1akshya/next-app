@@ -762,10 +762,19 @@ body {
 .roadmap1 {
   position: absolute;
   top: 3245px;
-  left: 0px;
+  left: 0;
   transition: opacity 0.3s ease;
   opacity: 1;
-  width:1520px;
+  width: 100vw; /* Use viewport width for better scaling */
+  max-width: 1520px; /* Set a maximum width for larger screens */
+  height: auto; /* Ensure aspect ratio is maintained */
+}
+
+@media (max-width: 768px) {
+  .roadmap1 {
+    width: 100%; /* Take full width of the screen on smaller devices */
+    max-width: none; /* Remove max-width restriction */
+  }
 }
 
 .roadmap1.fade {
