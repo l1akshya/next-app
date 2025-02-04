@@ -812,8 +812,8 @@ body {
   width: 600px; /* Full width */
   display: flex;
   align-items: center;
-  right:0px;
-  top:3850px;
+  left: calc(1520px - 600px); /* Adjust from left so it stays in the same position */
+  top: 3850px;
 }
 
 .footer-text {
@@ -830,13 +830,13 @@ body {
   color: #ffcc00; /* Change color on hover */
 }
 
-.footer2{
+.footer2 {
   position: absolute;
   width: 795px; /* Full width */
   display: flex;
   align-items: center;
-  right:0px;
-  top:3940px;
+  left: calc(1520px - 795px); /* Adjust from left so it stays in the same position */
+  top: 3940px;
 }
 
 .footer2-text {
@@ -852,6 +852,7 @@ body {
 .footer2-text:hover {
   color: #ffcc00; /* Change color on hover */
 }
+
 
 .copyright {
   position: absolute;
