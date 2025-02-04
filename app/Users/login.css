@@ -611,19 +611,6 @@ body {
 
 /*roadmap page 4 starts here*/
 
-.roadmap1 {
-  position: absolute;
-  top: 3245px;
-  left: 0px;
-  transition: opacity 0.3s ease;
-  opacity: 1;
-  width:1520px;
-}
-
-.roadmap1.fade {
-  opacity: 0.5;
-}
-
 
 .rm1 {
   position: absolute; /* Fixes it to the viewport */
@@ -751,23 +738,37 @@ body {
 
 
 
-.p4r1{
+.roadmap1 {
   position: absolute;
-  height:216px;
-  width:1519px;
-  top:3797px;
-  left:0px;
+  top: 3245px; /* Adjust the top to position it above p4r1 */
+  left: 0px;
+  width: 1519px; /* Same width as p4r1 */
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.p4r1 {
+  position: absolute;
+  height: 216px;
+  width: 1519px;
+  top: 3797px; /* p4r1 should be below roadmap1 */
+  left: 0px;
   background-color: #201F1F;
 }
 
-.p4r2{
+.p4r2 {
   position: absolute;
-  height:40px;
-  width:1519px;
-  top:4013px;
-  left:0px;
-  background-color:#323232;
+  height: 40px;
+  width: 1519px;
+  top: 4013px;
+  left: 0px;
+  background-color: #323232;
 }
+
+.roadmap1.fade {
+  opacity: 0.5;
+}
+
 
 
 .logo2{
