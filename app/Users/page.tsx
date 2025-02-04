@@ -61,9 +61,25 @@ export default function Home() {
   }, [images.length]);
 
   return (
-    <div className="page-container">
+    <div className="page-container"style={{ width: '1280px', margin: '0', padding: '0', overflow: 'hidden' }}>
       <head>
-      <meta name="viewport" content="width=1280, initial-scale=0.2, maximum-scale=1.0" /> {/* Fixed width for desktop */}
+      <meta name="viewport" content="width=1280, initial-scale=0.1" />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            html, body {
+              width: 1280px !important;
+              margin: 0 !important;
+              padding: 0 !important;
+              overflow-x: hidden !important;
+            }
+            .page-container {
+              width: 1280px !important;
+              margin: 0 !important;
+              padding: 0 !important;
+              overflow-x: hidden !important;
+            }
+          `
+        }} />
         <link
           href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
           rel="stylesheet"
