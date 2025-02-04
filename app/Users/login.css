@@ -777,6 +777,9 @@ body {
     background-size: cover; /* Take full width of the screen on smaller devices */
     max-width: none; /* Remove max-width restriction */
   }
+  .plt{
+    width:129vw;
+  }
 }
 
 .roadmap1.fade {
