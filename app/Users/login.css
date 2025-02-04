@@ -18,18 +18,6 @@ body {
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-
-.page-container {
-  width: 1280px; /* Fixed width for desktop */
-  margin: 0 auto; /* Center the container */
-}
-
-@media (max-width: 1280px) {
-  .page-container {
-    width: 100vw; /* Use full viewport width on smaller screens */
-    overflow-x: auto; /* Allow horizontal scrolling if necessary */
-  }
-}
 /* Logo */
 .logo {
   position: absolute;
