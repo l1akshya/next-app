@@ -6,13 +6,11 @@ import "./login.css";
 
 export default function Home() {
   const [shouldFadeRoadmap, setShouldFadeRoadmap] = useState(false);
-  const [currentImage, setCurrentImage] = useState(0);
-  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`); // Ensure index starts from 0 to 23
+  const [currentImage, setCurrentImage] = useState(1);
+  const images = Array.from({ length: 23 }, (_, index) => `/i${index}.png`);
 
   useEffect(() => {
-    // Ensure the page starts at the top on reload
     const resetScroll = () => window.scrollTo(0, 0);
-    
     resetScroll();
     window.addEventListener("load", resetScroll);
 
@@ -39,15 +37,13 @@ export default function Home() {
       requestAnimationFrame(() => {
         const { innerHeight, scrollY } = window;
         const { scrollHeight } = document.documentElement;
-        
-        // Check if the user has reached the bottom
         const isAtBottom = innerHeight + scrollY >= scrollHeight - 50;
         setShouldFadeRoadmap(isAtBottom);
 
         if (isAtBottom) {
           setTimeout(() => {
             setCurrentImage((prev) => (prev + 1 < images.length ? prev + 1 : 0));
-          }, 1500); // Smoother transition delay
+          }, 1500);
         }
       });
     };
