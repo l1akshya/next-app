@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import "./styles.css";
+import "./login.css";
 
 export default function Home() {
   const [shouldFadeRoadmap, setShouldFadeRoadmap] = useState(false);
