@@ -83,9 +83,11 @@ body {
   font-size: 10px;
   position: absolute;
   top: 450px;
-  left: 695.18px;
+  left: 50%; /* Center the element horizontally */
+  transform: translateX(-50%); /* Offset the left position by 50% of the element’s width */
   animation: transformText 2s ease-in-out 1s forwards;
 }
+
 
 @keyframes transformText {
   from {
@@ -106,7 +108,8 @@ body {
   font-size: 3.12px;
   position: absolute;
   top: 480px;
-  left: 725.18px;
+  left: 50%;
+  transform: translateX(-50%);
   animation: transformText2 2s ease-in-out 1s forwards;
 }
 
