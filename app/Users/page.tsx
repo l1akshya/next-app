@@ -61,7 +61,7 @@ export default function Home() {
   }, [images.length]);
 
   return (
-    <div className="page-container"style={{ width: '1280px', margin: '0', padding: '0', overflow: 'hidden' }}>
+    <div className="page-container">
       <head>
       <meta name="viewport" content="initial-scale=0.25, user-scalable=no, width=1280" />
         <link
