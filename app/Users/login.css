@@ -13,6 +13,20 @@ body {
   --color-end: #788EFF;
 }
 
+
+.page-container {
+  max-width: 1280px; /* Set a max width for the container */
+  margin: 0 auto; /* Center the container */
+  overflow: hidden; /* Prevent overflow */
+}
+
+@media (max-width: 1280px) {
+  .page-container {
+    width: 1280px; /* Force the width to 1280px on smaller screens */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+  }
+}
+
 /* Logo */
 .logo {
   position: absolute;
