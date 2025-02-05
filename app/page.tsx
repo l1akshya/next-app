@@ -59,8 +59,7 @@ export default function Home() {
   return (
     <div className="page-container">
       <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
+      <meta name="viewport" content="width=1280, initial-scale=0.27, user-scalable=no" />
         <link
           href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
           rel="stylesheet"
